@@ -69,27 +69,27 @@ void mergesort(int A[], int n) //Mergesort function
     Merge(L,R,A,mid,n-mid);
 }
 
-void displayarray(int A[], int n)
+void displayarray(int A[], int n) //function to display array elements, will be recursively called in main function
 {
-    int i;
-    for(i=0; i<n; i++)
-    {
-        cout << A[i] << "";
-        cout << ";";
-    }
+	for(int i=0; i<n; i++)
+		cout << A[i] << ";"; //displaying the array, the semi colons are so that it shows a semi colon after every number that is printed
 }
 
-int main()
+
+int main() //Main function where we recursively call the functions made earlier so that we have an output and the user also inputs the array size and elements
 {
-    int n,i;
-    cin >> n;
-    int A[n];
-    
-    for(i=0; i<n; i++)
-    
-        cin >> A[i];
-        
-        mergesort(A,n);
-        displayarray(A,n);
-        return 0;
+
+int n; //Array size	
+cout << "Enter Array Size!" << endl;
+cin >> n; //User inputs array size
+int A[n]; //Initializing array with n elements that user inputs
+
+cout << "Enter Array Elements!" << endl;
+for(int i=0; i<n; i++)
+	cin >> A[i]; //user inputs array elements
+
+	heapSort(A,n); //recursively calling heapsort function made earlier to sort the array
+	displayarray(A,n); //recursively calling display array function to display the final sorted array
+	
+return 0;
 }
