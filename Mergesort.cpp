@@ -88,7 +88,7 @@ cout << "Enter Array Elements!" << endl;
 for(int i=0; i<n; i++)
 	cin >> A[i]; //user inputs array elements
 
-	mergeort(A,n); //recursively calling heapsort function made earlier to sort the array
+	mergesort(A,n); //recursively calling heapsort function made earlier to sort the array
 	displayarray(A,n); //recursively calling display array function to display the final sorted array
 	
 return 0;
